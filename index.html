@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Colour Scheme Generator</title>
   </head>
   <body>
+    <div id="scheme-box">
+      <div id="scheme-header">
+        <input type="color" name="colorPicker" />
+
+        <select name="schemeNames">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-Dark</option>
+          <option value="monochrome-light">Monochrome-Light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-Complement</option>
+          <option value="triad">Triad</option>
+        </select>
+
+        <button>Get Color Scheme</button>
+      </div>
+
+      <div id="scheme-colors">
+        <div>red</div>
+        <div>green</div>
+        <div>blue</div>
+        <div>grey</div>
+        <div>purple</div>
+      </div>
+
+      <div id="scheme-hex">
+        <div>#ff0000</div>
+        <div>#aad1b6</div>
+        <div>#2b283a</div>
+        <div>#fbf3ab</div>
+        <div>#a626d3</div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
