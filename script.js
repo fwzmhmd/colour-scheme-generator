@@ -3,11 +3,11 @@ const input = document.querySelector('input');
 const select = document.querySelector('select');
 const button = document.querySelector('button');
 
-button.addEventListener('click', () =>
-  getScheme(input.value.substring(1), select.value)
-);
+button.addEventListener('click', getScheme);
 
-function getScheme(color, scheme) {
+function getScheme() {
+  const color = input.value.substring(1);
+  const scheme = select.value;
   fetch(`${apiUrl}scheme?hex=${color}&mode=${scheme}`)
     .then((res) => res.json())
     .then((data) => setScheme(data));
@@ -25,4 +25,4 @@ function setScheme(obj) {
   schemeHex.innerHTML = colors.map((c) => `<div>${c.hex.value}</div>`).join('');
 }
 
-getScheme(input.value.substring(1), select.value);
+getScheme();
